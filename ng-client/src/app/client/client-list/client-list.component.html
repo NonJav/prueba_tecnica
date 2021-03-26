@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="card-title">Lista de clientes</h4>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-right">
+                            <a class="btn btn-primary btn-rounded waves-effect" routerLink="add">
+                                <i class="mdi mdi-plus-circle"></i>
+                                Nuevo cliente
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Primer Nombre</th>
+                                    <th scope="col">Segundo Nombre</th>
+                                    <th scope="col">Primer Apellido</th>
+                                    <th scope="col">Segundo Apellido</th>
+                                    <th scope="col">Tipo Documento</th>
+                                    <th scope="col">Celular</th>
+                                    <th scope="col">Dirección</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf="clients.length > 0">
+                                <tr  *ngFor="let client of clients">
+                                    <th scope="row">{{client.primer_nombre}}</th>
+                                    <td>{{client.segundo_apellido}}</td>
+                                    <td>{{client.primer_apellido}}</td>
+                                    <td>{{client.segundo_apellido}}</td>
+                                    <td>{{client.tipo_doc}}</td>
+                                    <td>{{client.celular}}</td>
+                                    <td>{{client.direccion}}</td>
+                                    <td>{{client.correo}}</td>
+                                    <td>
+                                        <a class="btn btn-info" [routerLink]="['/client', client.id]">
+                                            Update
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

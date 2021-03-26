@@ -1,0 +1,85 @@
+<div class="container">
+
+    <div class="row" style="padding-top: 30px;">
+        
+        <!-- Column -->
+        <h1>Crear Cliente</h1>
+        <hr>
+
+        <form ngNativeValidate (ngSubmit)="createClient()" [formGroup]="forma">
+
+            <input type="hidden" formControlName="id" name="id">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Primer Nombre</label>
+                        <input formControlName="primer_nombre" name="primer_nombre" autocomplete="off" type="text" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Segundo Nombre</label>
+                        <input formControlName="segundo_nombre" name="segundo_nombre" autocomplete="off" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Primer Apellido</label>
+                        <input formControlName="primer_apellido" name="primer_apellido" autocomplete="off" type="text" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Segundo Apellido</label>
+                        <input formControlName="segundo_apellido" name="segundo_apellido" autocomplete="off" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Tipo Documento</label>
+                        <select formControlName="tipo_doc" name="tipo_doc" class="form-control" required>
+                            <option value="cc">Cédula de ciudadanía</option>
+                            <option value="ce">Cédula extranjería</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Correo</label>
+                        <input formControlName="correo" name="correo" autocomplete="off" type="email" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Télefono</label>
+                        <input formControlName="celular" name="celular" type="text" autocomplete="off" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="bmd-label-floating">Dirección</label>
+                        <input formControlName="direccion" name="direccion" type="text" autocomplete="off" class="form-control" required>
+                    </div>
+                </div>
+            </div>
+
+            
+            <br />
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-success waves-effect">Crear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
